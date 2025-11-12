@@ -182,6 +182,15 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   margin-top: 2rem;
 }
 
+/* Centrer overskriften på undersiden*/
+.centered-heading1 {
+  text-align: center;
+  font-size: clamp(1.8rem, 2vw + 1rem, 3rem);
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;  /* mindsker afstand til billederne */
+}
+
+
 /* Container for kolonner */
 .columns-container {
   display: flex;
@@ -210,4 +219,19 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   height: 300px;    /* begrænser højden */
   object-fit: cover; /* beskærer billedet, så proportionerne bevares */
   margin-bottom: 2rem;
+}
+
+.billeder-container2 {
+  display: flex;
+  justify-content: center; /* centrerer billederne horisontalt */
+  gap: 1rem;               /* afstand mellem billederne */
+  align-items: center;     /* centrerer dem lodret, hvis containeren har højde */
+}
+
+.billeder-container2 img {
+  width: 40%;       /* gør billederne brede */
+  height: 400px;    /* begrænser højden */
+  object-fit: cover; /* beskærer billedet, så proportionerne bevares */
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
