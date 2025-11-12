@@ -15,7 +15,45 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Egen CSS -->
-  <link href="css/styles.css" rel="stylesheet" />
+  <link href="/css/styles.css" rel="stylesheet" />
+
+  <style>
+      /* Centrer overskriften */
+      .centered-heading1 {
+          text-align: center;
+          font-size: clamp(1.8rem, 2vw + 1rem, 3rem);
+          margin-top: 1rem;
+          margin-bottom: 0.5rem;
+      }
+
+      /* Billedcontainer */
+      .billeder-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          justify-content: center;
+          margin-bottom: 3rem;
+      }
+
+      .billeder-container img {
+          width: auto;           /* bevarer oprindelig bredde */
+          height: 150px;         /* eller din ønskede højde */
+          object-fit: cover;     /* beskærer uden at forvrænge */
+      }
+
+      /* Responsiv for mobil */
+      @media (max-width: 768px) {
+          .billeder-container {
+              flex-direction: column;
+              align-items: center;
+          }
+          .billeder-container img {
+              width: 90%;       /* fylder næsten hele containeren */
+              max-width: 300px; /* kan justeres efter behov */
+              height: auto;     /* bevarer proportioner */
+          }
+      }
+  </style>
 </head>
 <body>
 
@@ -28,14 +66,12 @@
       <span class="brand-text">DANSK JERNBANE UNION</span>
     </a>
 
-    <!-- Toggler (mobil) -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navigation -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mb-0">
         <li class="nav-item"><a class="nav-link active" href="index.html">FORSIDE</a></li>
@@ -49,7 +85,6 @@
       </ul>
     </div>
 
-    <!-- Søgning (kun desktop) -->
     <form class="d-none d-lg-flex mb-0 search-form" role="search">
       <label class="visually-hidden" for="siteSearch">Søg</label>
       <input id="siteSearch" class="form-control me-2" type="search" placeholder="Søg" aria-label="Søg" />
@@ -58,16 +93,89 @@
   </div>
 </nav>
 
-
-
-<section class="content-section">
+<!-- ===== Overskrift ===== -->
+<section class="content-section1">
   <h1 class="centered-heading1">Dansk Model Jernbane Union</h1>
-
 </section>
 
+<!-- ===== Billeder ===== -->
 <div class="billeder-container2">
-  <img src="images/underside1.jpg" alt="Billede 1">
-  <img src="images/underside2.jpg" alt="Billede 2">
+  <img src="/images/underside1.jpg" alt="Billede 1">
+  <img src="/images/underside2.jpg" alt="Billede 2">
+</div>
+
+<div class="brødtekst">
+  <p>DMJU har indgået en sponsoraftale med OK, som giver dig mulighed for at støtte vores arbejde helt uden ekstra omkostninger. Hver gang du tanker med dit OK Kort eller via OK-appen, bidrager du automatisk med 5 øre pr. liter til DMJU. Denne simple handling hjælper os med at udvikle og styrke modeljernbanehobbyen i Danmark, støtte vores medlemsklubber og arrangere spændende events og aktiviteter.
+
+    Som en ekstra fordel modtager DMJU en bonus på 200 kr., når nye brugere har tanket 500 liter inden for et år. På den måde kan selv små daglige handlinger som at tanke brændstof være med til at gøre en stor forskel for vores arbejde og fællesskab. Ved at deltage i ordningen er du med til at sikre, at DMJU fortsat kan tilbyde engagerende oplevelser og ressourcer for hobbyister over hele landet..</p>
+</div>
+
+<div class="accordion" id="accordionExample">
+
+  <div class="accordion-item ">
+    <h2 class="accordion-header">
+      <button class="accordion-button bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Hvordan virker det?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body bg-info">
+        <strong>DMJUs aftale med OK løber fra Oktober 2024 til Oktober 2025,</strong> hvor vi så vil vide hvor mange penge der er indløbet på vores konto, fra første Januar 2026 vil vores Hjælpevogn kunne uddele midler til klubber.
+
+        Hjælpevognen er en måde hvor man med et OK benzin kort eller app, kan støtte klubber under DMJU.
+        Alle støtte kroner som kommer fra OK eller andre sponsere vil gå til klubber, er en klub af en eller anden grund i nød, kan de søge om midler ved DMJU som vil ser på sagen. En gang om året vil man se hvor mange midler som der er i Hjælpevognens kasse, DMJU vil man vurdere hvor mange midler der kan udles til alle klubber under DMJU, alle klubber vil få tildelt det samme beløb.
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed bg-success text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Hvad er Hjælpevognen?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body bg-info">
+        <strong>SHjælpevognen er DMJUs støttepulje,</strong>  hvor midler fra OK-aftalen samles og hvert år udloddes ligeligt til alle medlemsklubber.
+        Hvis en klub kommer i akut behov for hjælp, kan den søge ekstra midler via DMJU.
+
+        Aftaleperiode: Oktober 2024 – Oktober 2025
+        Uddeling af midler starter fra januar 2026.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Der er 2 muligheder for støtte
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body bg-info">
+        <strong>Støtte til nødlidende klubber eller støtte til andre klubber.</strong> Første mulighed er komme i en klub i økonomisk bekneb i forbindelse med f.eks. en vandskade, kan der ansøges om et engangstilskud (her kan det drøftes om der skal ansøges om et konkret beløb eller om der ydes tilskud efter en bedømmelse fra DMJU) alle ansøgninger vil blive drøfte på det først kommende bestyrelsesmøde i DMJU. Ansøgning klik her.
+        <br>
+        <br>
+        Anden mulighed er at der søges tilskud efter de gængse normer for sponsorater fra almennyttige fonde, dvs. at klubberne kan fremsende en ansøgning om støtte, som derefter tildeles efter afgørelse fra DMJU. Beløbets størrelse afgøres suverænt af DMJU og kan til enhver tid afvige fra det beløb, som måtte være angivet i ansøgningen.
+      </div>
+    </div>
+  </div>
+
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed bg-success text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Vil du vide mere?
+      </button>
+    </h2>
+    <div id="coollapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body bg-info">
+        <strong>Har du spørgsmål?</strong> Så er du velkommen til at kontakte Willy Nielsen på 22271777 eller kasserer(@)dmju.dk.
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ===== Footer ===== -->
@@ -81,9 +189,9 @@
       <div class="col-md-4 mb-3">
         <h5>Genveje</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-decoration-none text-white">Forside</a></li>
-          <li><a href="#" class="text-decoration-none text-white">Begivenheder</a></li>
-          <li><a href="#" class="text-decoration-none text-white">Kontakt</a></li>
+          <li><a href="/index.html" class="text-decoration-none text-white">Forside</a></li>
+          <li><a href="/begivenheder.html" class="text-decoration-none text-white">Begivenheder</a></li>
+          <li><a href="/kontakt.html" class="text-decoration-none text-white">Kontakt</a></li>
         </ul>
       </div>
       <div class="col-md-4 mb-3">

@@ -4,6 +4,10 @@
 // 2. Include any default v ariable overrides here
 $link-decoration: none;
 $primary: #01ABFF;
+$secondary: #c52b27;
+$success: #862623;
+$info: #f4f1f1;
+
 
 
 // 3. Include remainder of required Bootstrap stylesheets
@@ -157,7 +161,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   justify-content: center;
   text-align: center;
   color: #fff;
-  margin-top: 50px;
+  margin-top: 6rem;
 }
 
 .hero-image {
@@ -165,6 +169,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   height: 400px;      /* justér højden */
   object-fit: cover;  /* beskær billedet i stedet for at forvrænge det */
   display: block;
+}
+
+.hero-content h1 {
+  margin-bottom: 2.5rem;
 }
 
 .hero-text {
@@ -182,13 +190,14 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   margin-top: 2rem;
 }
 
-/* Centrer overskriften på undersiden*/
-.centered-heading1 {
+/* Centrer overskriften */
+.content-section1 {
   text-align: center;
-  font-size: clamp(1.8rem, 2vw + 1rem, 3rem);
-  margin-top: 1.5rem;
-  margin-bottom: 0.8rem;  /* mindsker afstand til billederne */
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
+
+
 
 
 /* Container for kolonner */
@@ -212,14 +221,17 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   justify-content: center; /* centrerer billederne horisontalt */
   gap: 1rem;               /* afstand mellem billederne */
   align-items: center;     /* centrerer dem lodret, hvis containeren har højde */
+  margin-bottom: 3rem;
 }
 
 .billeder-container img {
   width: 40%;       /* gør billederne brede */
-  height: 300px;    /* begrænser højden */
+  height: 400px;    /* begrænser højden */
   object-fit: cover; /* beskærer billedet, så proportionerne bevares */
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
+
+
 
 .billeder-container2 {
   display: flex;
@@ -235,3 +247,14 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
+.brødtekst {
+  text-align: justify;
+  justify-content: center;
+  margin: 0.5rem 9rem 4rem 9rem;
+}
+
+.accordion {
+
+  margin-bottom: 11rem;
+}
+
