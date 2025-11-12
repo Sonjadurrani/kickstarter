@@ -29,3 +29,106 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   padding-bottom: 0; /* fjerner ekstra mellemrum */
   margin-top: auto; /* skubber teksten ned */
 }
+.footer {
+  background-color: #01ABFF;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+.social-icons a {
+  font-size: 1.25rem;
+}
+
+/* ===== DMJU navbar & footer (pure CSS) ===== */
+
+/* Brand ved siden af logoet */
+.navbar .brand-text{
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  line-height: 1.05;
+  font-size: clamp(1.6rem, 1.2vw + 1.2rem, 2.6rem);
+  white-space: nowrap; /* hold brand på én linje */
+  color: #fff;
+}
+
+/* Logo-størrelse */
+.navbar-brand img{ max-width: 95px; height: auto; }
+
+/* Desktop (≥992px): 2-rækket grid
+   Række 1: brand fylder hele bredden
+   Række 2: nav (venstre) + søg (højre) */
+@media (min-width: 992px){
+  /* Bootstrap sætter .navbar .container-fluid til flex; overstyr til grid */
+  .navbar > .container-fluid.nav-grid{
+    display: grid !important;
+    grid-template-columns: 1fr auto; /* venstre: nav, højre: søg */
+    grid-template-rows: auto auto;   /* række1 brand, række2 nav/søg */
+    column-gap: 1rem;
+    row-gap: .25rem;
+    align-items: end;
+  }
+
+  /* Række 1: brand */
+  .navbar .nav-grid .navbar-brand{
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  /* Række 2: nav starter direkte under brand */
+  .navbar .nav-grid #navbarSupportedContent{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: flex-start;  /* venstre under brand */
+    padding-bottom: .125rem;      /* tættere på bundkanten */
+    gap: 1rem;
+  }
+
+  /* Hold nav på én linje */
+  .navbar .nav-grid .navbar-nav{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  .navbar .nav-grid .nav-link{
+    white-space: nowrap;
+    padding-bottom: .3rem;
+  }
+
+  /* Række 2: søg helt til højre */
+  .navbar .nav-grid .search-form{
+    grid-column: 2 / 3;
+    grid-row: 2;
+    justify-self: end;
+    white-space: nowrap;
+  }
+  .navbar .nav-grid .search-form input{
+    width: clamp(12rem, 20vw, 20rem); /* undgå at skubbe layout */
+  }
+}
+
+/* På mindre skærme: skjul lang brand-tekst så den ikke fylder */
+@media (max-width: 991.98px){
+  .navbar .brand-text{ display: none; }
+}
+
+/* Footer */
+.footer{
+  background-color: #01ABFF; /* ønsket farve */
+  color: #ffffff;
+  padding: 3rem 0;
+}
+.footer a{ color:#ffffff; }
+.footer a:hover{ color:#e6e6e6; text-decoration: underline; }
+.footer .social-icons .bi{
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
+/* Lidt strammere bund-justering af nav */
+.navbar-nav { align-items: flex-end; display: flex; }
+.navbar .nav-link { padding-bottom: 0; margin-top: auto; }
