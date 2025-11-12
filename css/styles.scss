@@ -21,3 +21,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // 5. Du kan lave styling her...
 
+.navbar-nav {
+  align-items: flex-end;
+  display: flex;
+}
+.navbar .nav-link {
+  padding-bottom: 0; /* fjerner ekstra mellemrum */
+  margin-top: auto; /* skubber teksten ned */
+}
