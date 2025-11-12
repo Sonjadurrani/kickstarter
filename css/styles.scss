@@ -43,14 +43,16 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 /* Brand ved siden af logoet */
 .navbar .brand-text{
-  font-weight: 800;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 1000;
   text-transform: uppercase;
-  letter-spacing: .02em;
+  letter-spacing: .05em;
   line-height: 1.05;
-  font-size: clamp(1.6rem, 1.2vw + 1.2rem, 2.6rem);
+  font-size: 3.5rem;
   white-space: nowrap; /* hold brand på én linje */
   color: #fff;
 }
+
 
 /* Logo-størrelse */
 .navbar-brand img{ max-width: 95px; height: auto; }
@@ -117,18 +119,95 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 /* Footer */
-.footer{
+.footer {
   background-color: #01ABFF; /* ønsket farve */
   color: #ffffff;
   padding: 3rem 0;
+
+  display: flex;           /* gør footeren til en flex-container */
+  flex-direction: column;  /* placerer elementerne lodret */
+  align-items: center;     /* centrerer indhold horisontalt */
+  text-align: left;      /* centrerer tekst i hvert element */
 }
-.footer a{ color:#ffffff; }
-.footer a:hover{ color:#e6e6e6; text-decoration: underline; }
-.footer .social-icons .bi{
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: #e6e6e6;
+  text-decoration: underline;
+}
+
+.footer .social-icons .bi {
   font-size: 1.25rem;
   vertical-align: middle;
 }
-
 /* Lidt strammere bund-justering af nav */
 .navbar-nav { align-items: flex-end; display: flex; }
 .navbar .nav-link { padding-bottom: 0; margin-top: auto; }
+
+.hero-section {
+  background: url("../images/pexels-miguel-rivera-2150485053-34683740.jpg") center/cover no-repeat;
+  width: 100vw;                      /* Fyld hele bredden */
+  margin-left: calc(-50vw + 50%);    /* Fjern Bootstrap container indryk */
+  height: 400px;                     /* Justér efter behov */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 400px;      /* justér højden */
+  object-fit: cover;  /* beskær billedet i stedet for at forvrænge det */
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Centrer overskriften */
+.centered-heading {
+  text-align: center;
+  font-size: clamp(1.8rem, 2vw + 1rem, 3rem);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+/* Container for kolonner */
+.columns-container {
+  display: flex;
+  gap: 2rem;           /* afstand mellem kolonner */
+  justify-content: center; /* centrer kolonnerne hvis mindre bredde */
+  flex-wrap: wrap;     /* gør det responsive på små skærme */
+  margin: 0.5rem 5rem 5rem 5rem;
+}
+
+/* Individuelle kolonner */
+.column {
+  flex: 1 1 300px;     /* fleksibel bredde, minimum 300px */
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.billeder-container {
+  display: flex;
+  justify-content: center; /* centrerer billederne horisontalt */
+  gap: 1rem;               /* afstand mellem billederne */
+  align-items: center;     /* centrerer dem lodret, hvis containeren har højde */
+}
+
+.billeder-container img {
+  width: 40%;       /* gør billederne brede */
+  height: 300px;    /* begrænser højden */
+  object-fit: cover; /* beskærer billedet, så proportionerne bevares */
+  margin-bottom: 2rem;
+}
