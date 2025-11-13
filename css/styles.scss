@@ -3,7 +3,7 @@
 
 // 2. Include any default v ariable overrides here
 $link-decoration: none;
-$primary: pink;
+$primary: #4087dc;
 
 
 // 3. Include remainder of required Bootstrap stylesheets
@@ -22,6 +22,19 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // 5. Du kan lave styling her...
 
 .container {
-  color: pink;
+  color: white;
 
+}
+
+.begivenheder {
+  margin-top: 2rem;
+}
+
+.kontakt{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.omos{
+  margin-bottom: 3rem;
 }
