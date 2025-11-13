@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Links</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Egen CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ===== Navbar (samme som på forsiden) ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid nav-grid">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center gap-3" href="links.html">
+            <img src="images/Logo.png" alt="DMJU logo" />
+            <span class="brand-text">DANSK MODEL JERNBANE UNION</span>
+        </a>
+
+        <!-- Toggler (mobil) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-0">
+                <li class="nav-item"><a class="nav-link" href="links.html">FORSIDE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">OM OS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">GALLERI</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">BEGIVENHEDER</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">MEDLEMSSIDE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">ANDRE KLUBBER</a></li>
+                <li class="nav-item"><a class="nav-link" href="links.html">LINKS</a></li>
+                <li class="nav-item"><a class="nav-link" href="medlemskab.html">DMJUS HJÆLPEVOGN</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">KONTAKT OS</a></li>
+            </ul>
+        </div>
+
+        <!-- Søgning (kun desktop) -->
+        <form class="d-none d-lg-flex mb-0 search-form" role="search">
+            <label class="visually-hidden" for="siteSearch">Søg</label>
+            <input id="siteSearch" class="form-control me-2" type="search" placeholder="Søg" aria-label="Søg" />
+            <button class="btn btn-outline-light" type="submit">Søg</button>
+        </form>
+    </div>
+</nav>
+
+<main class="py-5">
+    <div class="container links-page">
+        <h1 class="centered-heading mb-4">Links</h1>
+        <p class="mb-5">
+            På denne side kan du finde div. links, både til danske og internationale jernbanesider.
+            Har du et link som kan være interessant for andre, og som ikke findes her, kan du sende
+            linket til webmaster(@)dmju.dk eller formand(@)dmju.dk.
+        </p>
+
+        <!-- ===== EU sektion ===== -->
+        <div class="row align-items-start mb-5">
+            <div class="col-md-3 col-12 mb-3 mb-md-0">
+                <img src="images/flag-eu.png" alt="EU flag" class="img-fluid links-flag">
+            </div>
+            <div class="col-md-9 col-12">
+                <button class="links-toggle collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#euLinks"
+                        aria-expanded="false" aria-controls="euLinks">
+                    <span>MODEL JERNBANE FORENINGER I EU</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div id="euLinks" class="collapse links-panel">
+                    <ul class="list-unstyled mb-0">
+                        <li><strong>Morop</strong> – Verband der Modelleisenbahner und Eisenbahnfreunde Europas –
+                            <a href="https://www.morop.eu" target="_blank" rel="noopener">www.morop.eu</a>
+                        </li>
+                        <li><strong>BDEF</strong> – Bundesverband Deutscher Eisenbahn-Freunde e. V. (Tyskland) –
+                            <a href="https://www.bdef.de" target="_blank" rel="noopener">www.bdef.de</a>
+                        </li>
+                        <li><strong>Smv-aktuell</strong> – Sächsische Modellbahner Vereinigung (Tyskland) –
+                            <a href="https://smv-aktuell.de" target="_blank" rel="noopener">smv-aktuell.de</a>
+                        </li>
+                        <li><strong>MJF</strong> – Modelljernbaneforeningen (Norge) –
+                            <a href="https://www.mjf.no" target="_blank" rel="noopener">www.mjf.no</a>
+                        </li>
+                        <li><strong>Eisenbahn Amateur</strong> – Schweizerischer Verband Eisenbahn-Amateur (Schweiz) –
+                            <a href="https://www.eisenbahn-amateur.ch" target="_blank" rel="noopener">www.eisenbahn-amateur.ch</a>
+                        </li>
+                        <li><strong>Voemec</strong> – Dachverband der österreichischen Modelleisenbahnclubs (Østrig) –
+                            <a href="https://www.voemec.at" target="_blank" rel="noopener">www.voemec.at</a>
+                        </li>
+                        <li><strong>Febelrail</strong> – De portaalsite voor de Belgische treinliefhebber (Belgien) –
+                            <a href="https://www.febelrail.be" target="_blank" rel="noopener">www.febelrail.be</a>
+                        </li>
+                        <li><strong>FCAF</strong> – Federacio Catalana D’amics del Ferrocaril (Spanien) –
+                            <a href="https://www.fcaf.cat" target="_blank" rel="noopener">www.fcaf.cat</a>
+                        </li>
+                        <li><strong>Polski Zwiazek Modelarzy Kolejowych</strong> (Polen) –
+                            <a href="https://www.pzmk.org.pl" target="_blank" rel="noopener">www.pzmk.org.pl</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== DK sektion ===== -->
+        <div class="row align-items-start mb-5">
+            <div class="col-md-3 col-12 mb-3 mb-md-0">
+                <img src="images/dk-flag.png" alt="Danmarks flag" class="img-fluid links-flag">
+            </div>
+            <div class="col-md-9 col-12">
+                <button class="links-toggle collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#dkLinks"
+                        aria-expanded="false" aria-controls="dkLinks">
+                    <span>MODEL JERNBANE FORENINGER I DK</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div id="dkLinks" class="collapse links-panel">
+                    <!-- Fyld op med danske klub/forenings-links efter behov -->
+                    <ul class="list-unstyled mb-0">
+                            <li><strong>Dansk Jernbane Klub (DJK)</strong> – links til alt om jernbaner og modeljernbaner –
+                                <a href="https://www.jernbaneklub.dk" target="_blank" rel="noopener">www.jernbaneklub.dk</a>
+                            </li>
+                            <li><strong>Veteranbanen Bryrup–Vrads</strong> –
+                                <a href="http://www.veteranbanen.dk" target="_blank" rel="noopener">www.veteranbanen.dk</a>
+                            </li>
+                            <li><strong>Mariager–Handest Veteranjernbane</strong> –
+                                <a href="https://www.mhvj.dk" target="_blank" rel="noopener">www.mhvj.dk</a>
+                            </li>
+                            <li><strong>Danmarks Jernbanemuseum</strong> –
+                                <a href="https://www.jernbanemuseet.dk" target="_blank" rel="noopener">www.jernbanemuseet.dk</a>
+                            </li>
+                            <li><strong>De Bornholmske Jernbaner Foreningen</strong> –
+                                <a href="https://www.dbj.dk" target="_blank" rel="noopener">www.dbj.dk</a>
+                            </li>
+                            <li><strong>Djurslands Jernbanemuseum</strong> –
+                                <a href="https://www.djbm.dk" target="_blank" rel="noopener">www.djbm.dk</a>
+                            </li>
+                            <li><strong>Gedser Remise</strong> –
+                                <a href="http://gedserremise.dk" target="_blank" rel="noopener">gedserremise.dk</a>
+                            </li>
+                            <li><strong>Østsjællandske Jernbaneklub</strong> –
+                                <a href="https://www.osjk.dk" target="_blank" rel="noopener">www.osjk.dk</a>
+                            </li>
+                            <li><strong>Vestsjællands Veterantog</strong> –
+                                <a href="https://www.vsvt.dk" target="_blank" rel="noopener">www.vsvt.dk</a>
+                            </li>
+                            <li><strong>Sydfynske Veteranjernbane</strong> –
+                                <a href="https://www.sfvj.dk" target="_blank" rel="noopener">www.sfvj.dk</a>
+                            </li>
+                            <li><strong>Museumsbanen Maribo–Bandholm</strong> –
+                                <a href="https://www.museumsbanen.dk" target="_blank" rel="noopener">www.museumsbanen.dk</a>
+                            </li>
+                            <li><strong>Limfjordsbanen</strong> –
+                                <a href="https://www.limfjordsbanen.dk" target="_blank" rel="noopener">www.limfjordsbanen.dk</a>
+                            </li>
+                            <li><strong>Haderslevbanen</strong> –
+                                <a href="https://www.haderslevbanen.dk" target="_blank" rel="noopener">www.haderslevbanen.dk</a>
+                            </li>
+                            <li><strong>Nordsjællands Veterantog</strong> –
+                                <a href="https://www.veterantoget.dk" target="_blank" rel="noopener">www.veterantoget.dk</a>
+                            </li>
+                            <li><strong>Sporvejshistorisk Selskab</strong> –
+                                <a href="https://www.sporvejsmuseet.dk" target="_blank" rel="noopener">www.sporvejsmuseet.dk</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Tidsskrifter & magasiner ===== -->
+        <div class="mb-3">
+            <button class="links-toggle collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#magazinesLinks"
+                    aria-expanded="false" aria-controls="magazinesLinks">
+                <span>TIDSSKRIFTER OG MAGASINER</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+            <div id="magazinesLinks" class="collapse links-panel">
+                <ul class="list-unstyled mb-0">
+                    <li><strong>Spor og Baner</strong> – dansk modeljernbanetidsskrift –
+                        <a href="https://www.sporogbaner.dk" target="_blank" rel="noopener">www.sporogbaner.dk</a>
+                    </li>
+                    <li><strong>Allt om Hobby</strong> – nordisk hobby magasin –
+                        <a href="https://www.hobby.se" target="_blank" rel="noopener">www.hobby.se</a>
+                    </li>
+                    <li><strong>Modelljärnvägs-magasinet</strong> – svensk modeljernbanetidsskrift –
+                        <a href="https://www.mj-magasinet.se" target="_blank" rel="noopener">www.mj-magasinet.se</a>
+                    </li>
+                    <li><strong>MJ-Bladet</strong> – norsk modeljernbanetidsskrift –
+                        <a href="https://www.mjf.no" target="_blank" rel="noopener">www.mjf.no</a>
+                    </li>
+                    <li><strong>MIBA</strong> – tysk modeljernbanetidsskrift –
+                        <a href="https://www.miba.de" target="_blank" rel="noopener">www.miba.de</a>
+                    </li>
+                    <li><strong>Eisenbahn Kurier</strong> – tysk modeljernbanetidsskrift –
+                        <a href="https://www.eisenbahn-kurier.de" target="_blank" rel="noopener">www.eisenbahn-kurier.de</a>
+                    </li>
+                    <li><strong>Modell Eisen Bahner</strong> – tysk modeljernbanetidsskrift –
+                        <a href="https://www.modelleisenbahner.de" target="_blank" rel="noopener">www.modelleisenbahner.de</a>
+                    </li>
+                    <li><strong>Eisenbahnmagazin</strong> – tysk modeljernbanetidsskrift –
+                        <a href="https://www.eisenbahnmagazin.de" target="_blank" rel="noopener">www.eisenbahnmagazin.de</a>
+                    </li>
+                    <li><strong>Eisenbahn-Journal</strong> – tysk modeljernbanetidsskrift –
+                        <a href="https://www.eisenbahn-journal.de" target="_blank" rel="noopener">www.eisenbahn-journal.de</a>
+                    </li>
+                    <li><strong>Model Railroader Magazine</strong> – amerikansk modeljernbanetidsskrift –
+                        <a href="https://mrr.trains.com" target="_blank" rel="noopener">mrr.trains.com</a>
+                    </li>
+                    <li><strong>Railway Modeller</strong> – engelsk modeljernbanetidsskrift –
+                        <a href="https://www.pecopublications.co.uk" target="_blank" rel="noopener">www.pecopublications.co.uk</a>
+                    </li>
+                    <li><strong>N Bahn Magazin</strong> – tysk spor N modeljernbanetidsskrift –
+                        <a href="https://www.nbahnmagazin.de" target="_blank" rel="noopener">www.nbahnmagazin.de</a>
+                    </li>
+                    <li><strong>N-Scale</strong> – amerikansk spor N modeljernbanetidsskrift –
+                        <a href="https://www.nscalemagazine.com" target="_blank" rel="noopener">www.nscalemagazine.com</a>
+                    </li>
+                    <li><strong>N-Scale Railroading</strong> – amerikansk spor N modeljernbanetidsskrift –
+                        <a href="https://www.nscalerailroadn.com" target="_blank" rel="noopener">www.nscalerailroadn.com</a>
+                    </li>
+                    <li><strong>Spurnull-Magazin</strong> – tysk spor 0 modeljernbanetidsskrift –
+                        <a href="https://www.spurnull-magazin.de" target="_blank" rel="noopener">www.spurnull-magazin.de</a>
+                    </li>
+                    <li><strong>Spurnull.de</strong> – tysk spor 0 netblad i pdf-format –
+                        <a href="https://www.spurnull.de" target="_blank" rel="noopener">www.spurnull.de</a>
+                    </li>
+                    <li><strong>Die Zeitschrift für Schmale Spuren</strong> – tysk spor 0 modeljernbanetidsskrift for smalspor –
+                        <a href="https://www.schmale-spuren.com" target="_blank" rel="noopener">www.schmale-spuren.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== Debatfora ===== -->
+        <div class="mb-3">
+            <button class="links-toggle collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#debateLinks"
+                    aria-expanded="false" aria-controls="debateLinks">
+                <span>DEBATFORA</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+            <div id="debateLinks" class="collapse links-panel">
+                <ul class="list-unstyled mb-0">
+                    <li><strong>Baneforum</strong> – dansk modelbaneforum –
+                        <a href="https://www.baneforum.dk" target="_blank" rel="noopener">www.baneforum.dk</a>
+                    </li>
+                    <li><strong>Sporskiftet</strong> – dansk modelbaneforum –
+                        <a href="https://www.sporskiftet.dk" target="_blank" rel="noopener">www.sporskiftet.dk</a>
+                    </li>
+                    <li><strong>Signalposten</strong> – dansk modelbaneforum –
+                        <a href="https://www.signalposten.dk" target="_blank" rel="noopener">www.signalposten.dk</a>
+                    </li>
+                    <li><strong>Jernbanen.dk</strong> – danske jernbaners materiel forum –
+                        <a href="https://www.jernbanen.dk" target="_blank" rel="noopener">www.jernbanen.dk</a>
+                    </li>
+                    <li><strong>Svenska-lok forum</strong> – svensk debatforum –
+                        <a href="https://www.svenska-lok.se" target="_blank" rel="noopener">www.svenska-lok.se</a>
+                    </li>
+                    <li><strong>Jernbane.net</strong> – norsk, svensk og dansk debatforum –
+                        <a href="https://www.jernbane.net" target="_blank" rel="noopener">www.jernbane.net</a>
+                    </li>
+                    <li><strong>Stummis Modellbahnforum</strong> – tysk modelbaneforum –
+                        <a href="https://www.stummiforum.de" target="_blank" rel="noopener">www.stummiforum.de</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== Diverse links ===== -->
+        <div class="mb-3">
+            <button class="links-toggle collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#miscLinks"
+                    aria-expanded="false" aria-controls="miscLinks">
+                <span>DIVERSE LINKS</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+            <div id="miscLinks" class="collapse links-panel">
+                <ul class="list-unstyled mb-0">
+                    <li><strong>Spor1NYT</strong> – Danmarks samlingsportal for Spor1 modeljernbaner i skala 1:32 –
+                        <a href="http://spor1nyt.dk" target="_blank" rel="noopener">http://spor1nyt.dk</a>
+                    </li>
+                    <li><strong>Dansk-jernbanearkiv</strong> – Per Topp Nielsens side om jernbaner –
+                        <a href="http://www.dansk-jernbanearkiv.dk" target="_blank" rel="noopener">www.dansk-jernbanearkiv.dk</a>
+                    </li>
+                    <li><strong>Göteborgs Modelljärnvägs Sällskap</strong> – svensk spor 0-anlæg –
+                        <a href="http://www.gmjs.se" target="_blank" rel="noopener">www.gmjs.se</a>
+                    </li>
+                    <li><strong>Freunde der Eisenbahn Hamburg</strong> –
+                        <a href="http://www.fde-hamburg.de" target="_blank" rel="noopener">www.fde-hamburg.de</a>
+                    </li>
+                    <li><strong>EVP Danmark</strong> – en guldgrube med billeder og information om danske jernbaner –
+                        <a href="http://www.evp.dk" target="_blank" rel="noopener">www.evp.dk</a>
+                    </li>
+                    <li><strong>Railway.zone</strong> – information med fokus på digitaldrift og anlægsbyg (engelsk) –
+                        <a href="http://railway.zone" target="_blank" rel="noopener">http://railway.zone</a>
+                    </li>
+                    <li><strong>My 1 2 87</strong> – jernbanen i model &amp; 1:1 –
+                        <a href="http://www.my1287.dk" target="_blank" rel="noopener">www.my1287.dk</a>
+                    </li>
+                    <li><strong>Digitaltog.dk</strong> –
+                        <a href="http://www.digitaltog.dk" target="_blank" rel="noopener">www.digitaltog.dk</a>
+                    </li>
+                    <li><strong>Udstillingsanlæg man kan besøge</strong> –
+                        <a href="https://dmju.dk/?page_id=315" target="_blank" rel="noopener">Klik her</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ===== Footer (samme som på forsiden) ===== -->
+<footer class="footer bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>Om os</h5>
+                <p>Dansk Model Jernbane Union er Danmarks landsdækkende interesseorganisation for modeljernbanehobbyen. Vi forbinder klubber og entusiaster over hele landet.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Genveje</h5>
+                <ul class="list-unstyled">
+                    <li><a href="links.html" class="text-decoration-none text-white">Forside</a></li>
+                    <li><a href="#" class="text-decoration-none text-white">Begivenheder</a></li>
+                    <li><a href="#" class="text-decoration-none text-white">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Følg os</h5>
+                <ul class="list-inline social-icons">
+                    <li class="list-inline-item"><a href="#"><i class="bi bi-facebook text-white"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="bi bi-twitter text-white"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="bi bi-instagram text-white"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="mb-4 border-light">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2025 DMJU. Alle rettigheder forbeholdes.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

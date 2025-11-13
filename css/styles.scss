@@ -3,7 +3,12 @@
 
 // 2. Include any default v ariable overrides here
 $link-decoration: none;
-$primary: pink;
+$primary: #01ABFF;
+$secondary: #c52b27;
+$success: #862623;
+$info: #f4f1f1;
+
+
 
 
 // 3. Include remainder of required Bootstrap stylesheets
@@ -12,7 +17,7 @@ $primary: pink;
 
 // 4. Include any default map overrides here
 $custom-colors: (
-	"farve": $cyan-400,
+        "farve": $cyan-400,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -21,7 +26,325 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // 5. Du kan lave styling her...
 
-.container {
-  color: pink;
+/* ===== Links-side ===== */
+.links-page {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
+.links-flag {
+  max-width: 180px;
+}
+
+.links-toggle {
+  width: 100%;
+  background-color: #d6452b; /* rød bjælke */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+}
+
+.links-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.links-toggle .bi {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+/* Bootstrap giver .collapsed når den er lukket */
+.links-toggle.collapsed .bi {
+  transform: rotate(0deg);
+}
+
+.links-toggle:not(.collapsed) .bi {
+  transform: rotate(180deg);
+}
+
+.links-panel {
+  border: 1px solid #d6452b;
+  border-top: none;
+  padding: 1rem 1.25rem;
+  background-color: #ffffff;
+}
+
+.links-panel ul li + li {
+  margin-top: 0.4rem;
+}
+/* Medlemsskab side */
+.medlemsskab-page {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.membership-toggle {
+  width: 100%;
+  background-color: #d6452b;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+}
+
+.membership-toggle .bi {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.membership-toggle.collapsed .bi {
+  transform: rotate(0deg);
+}
+
+.membership-toggle:not(.collapsed) .bi {
+  transform: rotate(180deg);
+}
+
+.membership-collapse {
+  margin-top: 0.5rem;
+}
+
+.navbar-nav {
+  align-items: flex-end;
+  display: flex;
+}
+.navbar .nav-link {
+  padding-bottom: 0; /* fjerner ekstra mellemrum */
+  margin-top: auto; /* skubber teksten ned */
+}
+.footer {
+  background-color: #01ABFF;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+.social-icons a {
+  font-size: 1.25rem;
+}
+
+/* ===== DMJU navbar & footer (pure CSS) ===== */
+
+/* Brand ved siden af logoet */
+.navbar .brand-text{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  line-height: 1.05;
+  font-size: 3.5rem;
+  white-space: nowrap; /* hold brand på én linje */
+  color: #fff;
+}
+
+
+/* Logo-størrelse */
+.navbar-brand img{ max-width: 95px; height: auto; }
+
+/* Desktop (≥992px): 2-rækket grid
+   Række 1: brand fylder hele bredden
+   Række 2: nav (venstre) + søg (højre) */
+@media (min-width: 992px){
+  /* Bootstrap sætter .navbar .container-fluid til flex; overstyr til grid */
+  .navbar > .container-fluid.nav-grid{
+    display: grid !important;
+    grid-template-columns: 1fr auto; /* venstre: nav, højre: søg */
+    grid-template-rows: auto auto;   /* række1 brand, række2 nav/søg */
+    column-gap: 1rem;
+    row-gap: .25rem;
+    align-items: end;
+  }
+
+  /* Række 1: brand */
+  .navbar .nav-grid .navbar-brand{
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  /* Række 2: nav starter direkte under brand */
+  .navbar .nav-grid #navbarSupportedContent{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: flex-start;  /* venstre under brand */
+    padding-bottom: .125rem;      /* tættere på bundkanten */
+    gap: 1rem;
+  }
+
+  /* Hold nav på én linje */
+  .navbar .nav-grid .navbar-nav{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  .navbar .nav-grid .nav-link{
+    white-space: nowrap;
+    padding-bottom: .3rem;
+  }
+
+  /* Række 2: søg helt til højre */
+  .navbar .nav-grid .search-form{
+    grid-column: 2 / 3;
+    grid-row: 2;
+    justify-self: end;
+    white-space: nowrap;
+  }
+  .navbar .nav-grid .search-form input{
+    width: clamp(12rem, 20vw, 20rem); /* undgå at skubbe layout */
+  }
+}
+
+/* På mindre skærme: skjul lang brand-tekst så den ikke fylder */
+@media (max-width: 991.98px){
+  .navbar .brand-text{ display: none; }
+}
+
+/* Footer */
+.footer {
+  background-color: #01ABFF; /* ønsket farve */
+  color: #ffffff;
+  padding: 3rem 0;
+
+  display: flex;           /* gør footeren til en flex-container */
+  flex-direction: column;  /* placerer elementerne lodret */
+  align-items: center;     /* centrerer indhold horisontalt */
+  text-align: left;      /* centrerer tekst i hvert element */
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: #e6e6e6;
+  text-decoration: underline;
+}
+
+.footer .social-icons .bi {
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+/* Lidt strammere bund-justering af nav */
+.navbar-nav { align-items: flex-end; display: flex; }
+.navbar .nav-link { padding-bottom: 0; margin-top: auto; }
+
+.hero-section {
+  background: url("../images/pexels-miguel-rivera-2150485053-34683740.jpg") center/cover no-repeat;
+  width: 100vw;                      /* Fyld hele bredden */
+  margin-left: calc(-50vw + 50%);    /* Fjern Bootstrap container indryk */
+  height: 400px;                     /* Justér efter behov */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  margin-top: 6rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: 400px;      /* justér højden */
+  object-fit: cover;  /* beskær billedet i stedet for at forvrænge det */
+  display: block;
+}
+
+.hero-content h1 {
+  margin-bottom: 2.5rem;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Centrer overskriften */
+.centered-heading {
+  text-align: center;
+  font-size: clamp(1.8rem, 2vw + 1rem, 3rem);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+/* Centrer overskriften */
+.content-section1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+
+
+
+/* Container for kolonner */
+.columns-container {
+  display: flex;
+  gap: 2rem;           /* afstand mellem kolonner */
+  justify-content: center; /* centrer kolonnerne hvis mindre bredde */
+  flex-wrap: wrap;     /* gør det responsive på små skærme */
+  margin: 0.5rem 5rem 5rem 5rem;
+}
+
+/* Individuelle kolonner */
+.column {
+  flex: 1 1 300px;     /* fleksibel bredde, minimum 300px */
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.billeder-container {
+  display: flex;
+  justify-content: center; /* centrerer billederne horisontalt */
+  gap: 1rem;               /* afstand mellem billederne */
+  align-items: center;     /* centrerer dem lodret, hvis containeren har højde */
+  margin-bottom: 3rem;
+}
+
+.billeder-container img {
+  width: 40%;       /* gør billederne brede */
+  height: 400px;    /* begrænser højden */
+  object-fit: cover; /* beskærer billedet, så proportionerne bevares */
+  margin-bottom: 3rem;
+}
+
+
+
+.billeder-container2 {
+  display: flex;
+  justify-content: center; /* centrerer billederne horisontalt */
+  gap: 1rem;               /* afstand mellem billederne */
+  align-items: center;     /* centrerer dem lodret, hvis containeren har højde */
+}
+
+.billeder-container2 img {
+  width: 40%;       /* gør billederne brede */
+  height: 400px;    /* begrænser højden */
+  object-fit: cover; /* beskærer billedet, så proportionerne bevares */
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.brødtekst {
+  text-align: justify;
+  justify-content: center;
+  margin: 0.5rem 9rem 4rem 9rem;
+}
+
+.accordion {
+
+  margin-bottom: 11rem;
 }
